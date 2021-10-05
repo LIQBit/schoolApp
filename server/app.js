@@ -2,11 +2,11 @@ const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
-//const cors = require('cors');
+const cors = require('cors');
 
 const app = express();
 
-//app.use(cors());
+app.use(cors());
 
 mongoose.connect('mongodb+srv://Leigh:test123@cluster0.u1j2r.mongodb.net',
         { dbName: 'test', useNewUrlParser: true, useUnifiedTopology: true  })
